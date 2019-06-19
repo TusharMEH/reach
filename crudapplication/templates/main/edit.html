@@ -13,11 +13,11 @@
 	<form method="POST" action="/update/{{employee.id}}">
 {% csrf_token %}
 		<h1>Edit the details</h1><br><br>
-		<label>  eid</label>
+		<label>id</label>
 		<input type="text" value="{{employee.eid}}">{{form.eid}}		
-		<label> ename</label>
+		<label> name</label>
 		<input type="text" value="{{employee.ename}}">{{form.ename}}
-		<label> eemail</label>
+		<label> email</label>
 		<input type="text" value="{{employee.eemail}}">{{form.eemail}}
 		<br><br>
 		<input type="submit" value="update" class="btn btn-outline-info">

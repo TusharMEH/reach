@@ -24,9 +24,7 @@ def update(request,id):
 	employee=Employee.objects.get(id=id)
 	if request.method=="POST":
 		form=EmployeeForm(request.POST)
-		print("ki")
 		if form.is_valid():
-			print("k")
 			form.save()
 			return redirect("crudapplication:show")
 	
