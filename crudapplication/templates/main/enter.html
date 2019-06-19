@@ -12,11 +12,11 @@
 	<form method="POST" action="/enter/">
 	{% csrf_token %}
 		<h1>Enter the details</h1><br><br>
-		<label> enter the id</label>
+		<label> enter your id</label>
 		<div class="col-sm-4">{{form.eid}}</div>
-		<label>enter name</label>
+		<label>enter your name</label>
 		<div class="col-sm-4">{{form.ename}}</div>
-		<label>enter email</label>
+		<label>enter your email</label>
 		<div class="col-sm-4">{{form.eemail}}</div>
 		<br><br>
 		<input type="submit" class="btn btn-outline-info" value="submit">
