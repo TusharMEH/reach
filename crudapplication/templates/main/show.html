@@ -1,0 +1,39 @@
+<html>
+<head>
+	{% load static %}
+	<link href="{% static 'tinymce/css/prism.css'  %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript for Materialize CSS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+<table>
+
+
+	<tr>
+		<th>Employee id</th>
+		<th>Employee name</th>
+		<th> Employee email</th>
+		<th>action</th>
+	</tr>
+{% for emp in employee %}
+<tr>
+	<td>{{emp.eid}}</td>
+	<td>{{emp.ename}}</td>
+	<td>{{emp.eemail}}</td>
+	<td>
+		<a href="/edit/{{emp.id}}">edit</a>
+		<a href="/delete/{{emp.id}}">delete</a>
+
+	</td>
+</tr>
+{% endfor %}
+</table>
+<br><br>
+<a href="/enter">add new record</a>
+
+
+</body>
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+</html>

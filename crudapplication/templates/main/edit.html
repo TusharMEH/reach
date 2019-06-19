@@ -1,0 +1,29 @@
+<html>
+<head>
+	{% load static %}
+	<link href="{% static 'tinymce/css/prism.css'  %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript for Materialize CSS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{% csrf_token %}
+</head>
+<body>
+	<div class="container">
+	<form method="POST" action="/update/{{employee.id}}">
+{% csrf_token %}
+		<h1>Edit the details</h1><br><br>
+		<label>  eid</label>
+		<input type="text" value="{{employee.eid}}">{{form.eid}}		
+		<label> ename</label>
+		<input type="text" value="{{employee.ename}}">{{form.ename}}
+		<label> eemail</label>
+		<input type="text" value="{{employee.eemail}}">{{form.eemail}}
+		<br><br>
+		<input type="submit" value="update" class="btn btn-outline-info">
+
+</form>
+</div>
+</body>
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+</html>
